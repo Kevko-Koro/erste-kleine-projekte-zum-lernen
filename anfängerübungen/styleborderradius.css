@@ -1,0 +1,162 @@
+/* Beispiel 1: Alle Ecken gleichmäßig abgerundet */
+        .example1 {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Beispiel 2: Obere rechte Ecke abgerundet */
+        .example2 {
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            border-top-right-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Beispiel 3: Nur die untere linke Ecke abgerundet */
+        .example3 {
+            width: 100px;
+            height: 100px;
+            background-color: #2ecc71;
+            border-bottom-left-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Beispiel 4: Kombination von abgerundeten Ecken */
+        .example4 {
+            width: 100px;
+            height: 100px;
+            background-color: #f1c40f;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Beispiel 5: Verschiedene Radien für verschiedene Ecken */
+        .example5 {
+            width: 100px;
+            height: 100px;
+            background-color: #9b59b6;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 25px;
+            margin-bottom: 20px;
+        }
+
+        /* Beispiel 6: Kreisförmiges Element */
+        .example6 {
+            width: 100px;
+            height: 100px;
+            background-color: #34495e;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* Beispiel 7: Ellipsenförmiges Element */
+        .example7 {
+            width: 200px;
+            height: 100px;
+            background-color: #e67e22;
+            border-radius: 100px 50px;
+            margin-bottom: 20px;
+        }
+
+
+/* Beispiel 1: Alle Ecken gleichmäßig abgerundet mit Schatten */
+.example8 {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Schatten hinzufügen */
+    margin-bottom: 20px;
+}
+
+/* Beispiel 2: Obere rechte Ecke abgerundet mit Schatten */
+.example9 {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    border-top-right-radius: 20px;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5); /* Schatten hinzufügen */
+    margin-bottom: 20px;
+}
+
+/* Beispiel 3: Nur die untere linke Ecke abgerundet mit Schatten */
+.example10 {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    border-bottom-left-radius: 15px;
+    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.5); /* Schatten hinzufügen */
+    margin-bottom: 20px;
+}
+
+/* Beispiel 4: Kombination von abgerundeten Ecken mit Schatten */
+.example11 {
+    width: 100px;
+    height: 100px;
+    background-color: #f1c40f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 40px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Schatten hinzufügen */
+    margin-bottom: 20px;
+}
+
+/* Beispiel 5: Verschiedene Radien für verschiedene Ecken mit Schatten */
+.example12 {
+    width: 100px;
+    height: 100px;
+    background-color: #9b59b6;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 25px;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5); /* Schatten hinzufügen */
+    margin-bottom: 20px;
+}
+
+/* Beispiel 6: Kreisförmiges Element mit Schatten */
+.example13 {
+    width: 100px;
+    height: 100px;
+    background-color: #34495e;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Schatten hinzufügen */
+    margin-bottom: 20px;
+}
+
+/* Beispiel 7: Ellipsenförmiges Element mit Schatten */
+.example14 {
+    width: 200px;
+    height: 100px;
+    background-color: #e67e22;
+    border-radius: 100px 50px;
+    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.5); /* Schatten hinzufügen */
+    margin-bottom: 20px;
+}
+
+/* Stil für die erste Section */
+.section1 {
+    width: 50%; /* Die Breite der ersten Section auf 50% setzen */
+    float: left; /* Float links */
+}
+
+/* Stil für die zweite Section */
+.section2 {
+    width: 50%; /* Die Breite der zweiten Section auf 50% setzen */
+    float: left; /* Float links */
+}
+
+/* CSS-Code für den Hintergrund des <body>-Tags */
+body {
+    background-color: #8a8a8a;
+}
