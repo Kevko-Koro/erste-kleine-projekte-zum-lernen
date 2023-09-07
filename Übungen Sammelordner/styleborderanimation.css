@@ -1,0 +1,22 @@
+* Stil für das animierte Element */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    margin: 50px auto;
+    position: relative;
+    animation: pulse 2s infinite; /* Animation "pulse" für 2 Sekunden in Endlosschleife */
+}
+
+/* Keyframes-Animation für den Border-Effekt */
+@keyframes pulse {
+    0% {
+        border: 2px solid #3498db; /* Anfangszustand - blauer Border */
+    }
+    50% {
+        border: 8px solid #e74c3c; /* Border vergrößern und Farbe ändern */
+    }
+    100% {
+        border: 2px solid #3498db; /* Zurück zum Anfangszustand */
+    }
+}
