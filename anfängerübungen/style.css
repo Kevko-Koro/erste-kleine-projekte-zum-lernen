@@ -1,3 +1,13 @@
 .flexcontainer {
     display: flex;
+    border: 2px solid #000; /* Rahmen um die Flexbox, 2 Pixel breit, schwarz */
+    padding: 10px; /* Innenabstand, um den Inhalt vom Rahmen zu trennen */
 }
+
+.flex-item {
+    flex: 1; /* Flexibles Wachstum der Elemente */
+    text-align: center; /* Text zentrieren */
+    padding: 10px; /* Innenabstand für die Elemente */
+    border: 1px solid #333; /* Rahmen um die Flex-Elemente, 1 Pixel breit, dunkelgrau */
+}
+
