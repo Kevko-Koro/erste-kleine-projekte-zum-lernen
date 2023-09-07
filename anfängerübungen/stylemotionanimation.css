@@ -1,28 +1,32 @@
+/* Der CSS-Code, der das Erscheinungsbild der Leuchtschrift definiert */
+
+/* Das body-Element wird zentriert und hat einen dunklen Hintergrund */
+
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #111;
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center; /* Zentriert vertikal */
+    height: 100vh; /* 100% der Bildschirmhöhe */
+    margin: 0; /* Entfernt den Standardrand */
+    background-color: #111; /* Dunkler Hintergrund */
 }
-
+/* Die Leuchtschrift wird gestylt */
 .leuchtschrift {
-    font-size: 3em;
-    font-weight: bold;
-    color: transparent;
-    text-align: center;
-    background-image: linear-gradient(45deg, #f06, #9f6);
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: leuchten 2s linear infinite;
+    font-size: 3em; /* Schriftgröße */
+    font-weight: bold; /* Fettschrift */
+    color: transparent; /* Textfarbe auf transparent setzen */
+    text-align: center; /* Zentriert den Text horizontal */
+    background-image: linear-gradient(45deg, #f06, #9f6); /* Hintergrundbild (Farbverlauf) */
+    background-clip: text; /* Anwenden des Hintergrundbilds auf den Text */
+    -webkit-background-clip: text; /* Für Webkit-Browser (wie Chrome) */
+    animation: leuchten 2s linear infinite; /* Verwendung der "leuchten" Animation */
 }
-
+/* Die Keyframes-Animation "leuchten" wird definiert */
 @keyframes leuchten {
-    0% {
-        background-position: 100%;
+    0 0% {
+        background-position: 100%; /* Startpunkt für den Farbverlauf */
     }
     100% {
-        background-position: -100%;
+        background-position: -100%; /* Endpunkt für den Farbverlauf */
     }
 }
