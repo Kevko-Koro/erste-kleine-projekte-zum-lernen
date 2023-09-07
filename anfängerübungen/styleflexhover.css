@@ -1,0 +1,31 @@
+/* Stil für die Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: center; /* In der Mitte ausrichten */
+    align-items: center; /* In der Mitte ausrichten */
+    width: 100%;
+    height: 100vh;
+}
+
+/* Stil für die Flex-Elemente */
+.flex-item {
+    flex: 1; /* Flexibles Wachstum der Elemente */
+    text-align: center; /* Text zentrieren */
+    padding: 20px; /* Innenabstand für die Elemente */
+    border: 2px solid transparent; /* Rahmen um die Flex-Elemente (anfangs unsichtbar) */
+    transition: border-color 0.3s; /* Übergangseffekt für die Rahmenfarbe */
+}
+
+/* Stil für den Hover-Effekt */
+.flex-item:hover {
+    border-color: #007BFF; /* Rahmenfarbe beim Überfahren (blau) */
+    cursor: pointer; /* Zeiger anzeigen, um den Klick anzudeuten */
+}
+/*In diesem Beispiel haben wir eine Flexbox erstellt, die in der Mitte des Bildschirms ausgerichtet ist. Jedes Flex-Element hat einen unsichtbaren Rahmen (border: 2px solid transparent), der beim Überfahren des Elements sichtbar wird (border-color: #007BFF). Der Rahmen wird durch den :hover-Pseudo-Selektor aktiviert.*/
+
+/*Sie können den Code anpassen, indem Sie die Farben, den Abstand und andere Eigenschaften nach Ihren Wünschen ändern. Dieses Beispiel zeigt Ihnen, wie Sie Flexbox-Container erstellen und mit einem Hover-Effekt versehen können.*/
+
+
+
+
+
