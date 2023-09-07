@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #111;
+}
+
+.leuchtschrift {
+    font-size: 3em;
+    font-weight: bold;
+    color: transparent;
+    text-align: center;
+    background-image: linear-gradient(45deg, #f06, #9f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: leuchten 2s linear infinite;
+}
+
+@keyframes leuchten {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: -100%;
+    }
+}
