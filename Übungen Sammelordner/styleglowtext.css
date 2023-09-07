@@ -1,0 +1,22 @@
+/* CSS-Datei für den Glow-Effekt auf das Wort "Loading" */
+.loading-text {
+    font-size: 72px; /* Schriftgröße anpassen */
+    font-weight: bold; /* Fetter Text */
+    text-align: center; /* Zentrierte Ausrichtung */
+    color: #333; /* Textfarbe */
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f; /* Textschatten mit mehreren Ebenen */
+    animation: glow 1.5s infinite; /* Animation für den Glow-Effekt */
+}
+
+/* Keyframes-Animation für den Glow-Effekt */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f; /* Anfangsschatten */
+    }
+    50% {
+        text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f; /* Stärkerer Schatten */
+    }
+    100% {
+        text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f; /* Rückkehr zum Anfangszustand */
+    }
+}
