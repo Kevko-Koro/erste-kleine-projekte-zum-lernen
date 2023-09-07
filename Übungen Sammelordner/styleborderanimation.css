@@ -1,13 +1,13 @@
 /* Stil für das animierte Element */
 .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    background-color: #3498db;
-    margin: 50px auto;
-    position: relative;
+    display: flex; /* `display: flex;` verwandelt das Element in einen flexiblen Container, der seine Kinder (Children) anordnet. */
+    justify-content: center; /* `justify-content: center;` zentriert die Kinder horizontal innerhalb des flexiblen Containers. */
+    align-items: center; /* `align-items: center;` zentriert die Kinder vertikal innerhalb des flexiblen Containers. */
+    width: 200px; /* `width: 200px;` legt die Breite des Elements auf 200 Pixel fest. */
+    height: 200px; /* `height: 200px;` legt die Höhe des Elements auf 200 Pixel fest. */
+    background-color: #3498db; /* `background-color: #3498db;` setzt die Hintergrundfarbe des Elements auf das Blau mit der Hexadezimalfarbe `#3498db`. */
+    margin: 50px auto; /* `margin: 50px auto;` definiert den Außenabstand des Elements (50px oben/unten, automatische Anpassung links/rechts), um es in der Mitte der Seite horizontal zu zentrieren. */
+    position: relative; /* `position: relative;` setzt die Position des Elements auf "relative", was es erlaubt, die Positionierung von nachfolgenden Elementen innerhalb dieses Elements zu steuern. */
     animation: pulse 2s infinite; /* Animation "pulse" für 2 Sekunden in Endlosschleife */
 }
 
