@@ -22,11 +22,12 @@ body {
     animation: leuchten 2s linear infinite; /* Verwendung der "leuchten" Animation */
 }
 /* Die Keyframes-Animation "leuchten" wird definiert */
+
 @keyframes leuchten {
-    0 0% {
-        background-position: 100%; /* Startpunkt für den Farbverlauf */
-    }
+    0% {
+        background-position: 100%;
+    } /* Startpunkt für den Farbverlauf */
     100% {
-        background-position: -100%; /* Endpunkt für den Farbverlauf */
-    }
+        background-position: -100%;
+    } /* Endpunkt für den Farbverlauf */
 }
