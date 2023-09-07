@@ -1,5 +1,8 @@
-* Stil für das animierte Element */
+/* Stil für das animierte Element */
 .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 200px;
     background-color: #3498db;
@@ -8,15 +11,77 @@
     animation: pulse 2s infinite; /* Animation "pulse" für 2 Sekunden in Endlosschleife */
 }
 
+.box2 {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    margin: 50px auto;
+    position: relative;
+    animation: pulse 2s infinite, shadow 2s infinite; /* Füge Schatten-Animation hinzu */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Anfangsschatten */
+}
+
+.box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    margin: 50px auto;
+    position: relative;
+    animation: pulse 2s infinite, glow 2s infinite; /* Füge Leuchteffekt-Animation hinzu */
+    box-shadow: none; /* Entferne den Schatten */
+
+}
+
+body {
+    background-color: #7a7a7a;
+}
+
 /* Keyframes-Animation für den Border-Effekt */
 @keyframes pulse {
     0% {
         border: 2px solid #3498db; /* Anfangszustand - blauer Border */
     }
     50% {
-        border: 8px solid #e74c3c; /* Border vergrößern und Farbe ändern */
+        border: 8px solid #4b2622; /* Border vergrößern und Farbe ändern */
     }
     100% {
         border: 2px solid #3498db; /* Zurück zum Anfangszustand */
+    }
+}
+
+
+/* Keyframes-Animation für den Schatten */
+@keyframes shadow {
+    0% {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Anfangsschatten */
+    }
+    50% {
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten */
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Rückkehr zum Anfangsschatten */
+    }
+}
+
+/* Keyframes-Animation für den Leuchteffekt */
+@keyframes glow {
+    0% {
+        background-color: #3498db; /* Anfangshintergrundfarbe */
+        box-shadow: none; /* Kein Schatten zu Beginn */
+    }
+    50% {
+        background-color: #3498db; /* Hintergrundfarbe bleibt gleich */
+        box-shadow: 0px 0px 20px #3498db; /* Leuchteffekt mit blauem Schatten */
+    }
+    100% {
+        background-color: #3498db; /* Rückkehr zur Anfangshintergrundfarbe */
+        box-shadow: none; /* Kein Schatten am Ende */
     }
 }
