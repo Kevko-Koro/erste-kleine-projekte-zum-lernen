@@ -1,0 +1,51 @@
+/* Der CSS-Code für die Sidebar und den Hover-Effekt */
+
+/* Der Hauptcontainer wird zentriert und hat eine flexible Aufteilung */
+.container {
+    display: flex;
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center; /* Zentriert vertikal */
+    height: 100vh; /* 100% der Bildschirmhöhe */
+}
+
+/* Die Sidebar wird gestylt */
+.sidebar {
+    width: 200px; /* Standardbreite der Sidebar */
+    background-color: #333; /* Hintergrundfarbe der Sidebar */
+    padding: 20px; /* Innenabstand der Sidebar */
+    transition: width 0.3s; /* Animationsübergang für die Breite */
+}
+
+/* Der Hauptinhalt */
+.content {
+    padding: 20px; /* Innenabstand des Hauptinhalts */
+    background-color: #fff; /* Hintergrundfarbe des Hauptinhalts */
+}
+
+/* Der Hover-Effekt für die Sidebar */
+.sidebar:hover {
+    width: 250px; /* Vergrößerte Breite beim Überfahren mit der Maus */
+}
+
+/* Stil für die Sidebar-Links */
+.sidebar ul {
+    list-style: none; /* Listenpunkte entfernen */
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px; /* Abstand zwischen den Links */
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* Unterstreichungen entfernen */
+    color: #fff; /* Textfarbe der Links */
+    display: block;
+}
+
+/* Stil für die Sidebar-Links beim Überfahren mit der Maus */
+.sidebar ul li a:hover {
+    background-color: #555; /* Hintergrundfarbe ändern */
+    padding: 5px; /* Innenabstand ändern */
+    border-radius: 5px; /* Abrundungseffekt hinzufügen */
+}
