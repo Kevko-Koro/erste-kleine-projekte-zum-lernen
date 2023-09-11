@@ -10,8 +10,20 @@
 <body>
 
     <div class="bild-container">
+        <!-- Das "src" -Attribut gibt den Pfad zum Bild an -->
         <img src="../Bilder/testbild img hover.png" alt="Bild">
+
+        Die Verwendung von ../ im Bildpfad dient dazu, das Bild relativ zum aktuellen Verzeichnis der HTML-Datei zu suchen. Hier ist, was es bedeutet:
+
+<!-- .. wechselt ein Verzeichnis höher im Dateisystem. Wenn Ihre HTML-Datei sich in einem Unterverzeichnis befindet und das Bild sich im übergeordneten Verzeichnis (eine Ebene höher) befindet, verwenden Sie .., um auf dieses Verzeichnis zuzugreifen.
+
+/ ist der Verzeichnistrenner, der die einzelnen Verzeichnisebenen voneinander trennt. In den meisten Dateisystemen und auch in Web-URLs wird der Schrägstrich ("/") als Trennzeichen verwendet.
+
+Daher bedeutet ../Bilder/, dass das Bild im Verzeichnis "Bilder" gesucht wird, das sich eine Ebene über dem Verzeichnis befindet, in dem sich Ihre HTML-Datei befindet. Dies ist eine nützliche Technik, um auf Ressourcen zuzugreifen, die sich in übergeordneten Verzeichnissen Ihres Webprojekts befinden. -->
+
     </div>
+
+
 
 </body>
 </html>
