@@ -1,8 +1,19 @@
 /* Standardstile für das Bild */
+
+/*In diesem CSS-Code:
+
+position: relative; gibt an, dass das Element relativ positioniert ist, was bedeutet, dass es sich weiterhin im normalen Fluss des Dokuments befindet, aber mit Hilfe von top und left verschoben werden kann.
+
+top: 10px; verschiebt das Element um 10 Pixel nach unten. Positive Werte verschieben das Element nach unten, während negative Werte es nach oben verschieben würden.
+
+left: 20px; verschiebt das Element um 20 Pixel nach rechts. Positive Werte verschieben es nach rechts, während negative Werte es nach links verschieben würden. */
+
 .bild-container {
-    position: relative;
+    position: relative; /* Gibt an, wie das Element positioniert wird */
+    top: 300px; /* Verschiebt das Element um 300 Pixel nach unten */
+    left: 500px; /* Verschiebt das Element um 500 Pixel nach rechts */
     width: 300px; /* Die Breite und Höhe entsprechend anpassen */
-    height: 200px;
+    height: 200px; 
 }
 
 .bild-container img {
@@ -15,3 +26,4 @@
 .bild-container:hover img {
     transform: scale(1.5); /* Das Bild um 110% vergrößern */
 }
+
