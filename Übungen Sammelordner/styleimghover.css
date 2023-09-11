@@ -1,0 +1,17 @@
+/* Standardstile für das Bild */
+.bild-container {
+    position: relative;
+    width: 300px; /* Die Breite und Höhe entsprechend anpassen */
+    height: 200px;
+}
+
+.bild-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; /* Eine sanfte Übergangseffekt hinzufügen */
+}
+
+/* Stiländerungen beim Hovern */
+.bild-container:hover img {
+    transform: scale(1.5); /* Das Bild um 110% vergrößern */
+}
