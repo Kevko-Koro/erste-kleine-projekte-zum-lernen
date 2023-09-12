@@ -1,9 +1,7 @@
 body {
   background-color: #201f1f;
-}
-
-.sidebartext {
-  font-size: 35px;
+  margin: 0; /* Entfernt den Standardseitenrand */
+  overflow: hidden; /* Verhindert das Scrollen, wenn die Sidebar zu groß ist */
 }
 
 /* Die Sidebar wird links am Bildschirm platziert und hat eine Breite von 250px */
@@ -15,8 +13,8 @@ body {
   height: 100%; /* Füllt die gesamte Bildschirmhöhe aus */
 
   background: linear-gradient(
-    rgba(255, 217, 0, 0.5),
-    rgba(0, 0, 0, 0.8)
+      rgba(255, 217, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
   ); /* Farbverlauf mit Transparenz */
   padding-top: 20px; /* Platz oben für den Inhalt */
 }
@@ -50,4 +48,39 @@ body {
   font-size: 35px;
 }
 
+/* CSS zum Zentrieren und Anpassen des Twitch-Streams */
+#twitch-embed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  right: 20px; /* Hier kannst du den gewünschten Abstand zur rechten Seite einstellen */
+  width: calc(
+      100% - 500px
+  ); /* Die Gesamtbreite abzüglich des Abstands zur rechten Seite */
+  height: 100%;
+}
 
+/* Stil für die rechte Sidebar */
+.right-sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+      rgba(255, 217, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+  );
+  padding-top: 20px;
+  z-index: 1; /* Stellt sicher, dass die rechte Sidebar über dem Twitch-Stream liegt */
+}
+
+/* Stil für Nachrichtenkästen in der rechten Sidebar */
+.message-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
