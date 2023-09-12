@@ -50,4 +50,15 @@ body {
   font-size: 35px;
 }
 
-
+/* CSS zum Zentrieren und Anpassen des Twitch-Streams */
+#twitch-embed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  right: 20px; /* Hier kannst du den gewünschten Abstand zur rechten Seite einstellen */
+  width: calc(
+    100% - 500px
+  ); /* Die Gesamtbreite abzüglich des Abstands zur rechten Seite */
+  height: 100%;
+}
