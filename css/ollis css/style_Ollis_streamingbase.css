@@ -49,3 +49,17 @@ body {
   color: #fff; /* Textfarbe für den aktiven Link */
   font-size: 35px;
 }
+
+/* Setze die Größe des Iframe */
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Zentriere den Iframe in der Mitte der Seite */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
