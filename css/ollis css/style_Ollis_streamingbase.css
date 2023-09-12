@@ -13,8 +13,8 @@ body {
   height: 100%; /* Füllt die gesamte Bildschirmhöhe aus */
 
   background: linear-gradient(
-      rgba(255, 217, 0, 0.5),
-      rgba(0, 0, 0, 0.8)
+    rgb(250, 250, 250),
+    rgba(0, 0, 0, 0.603)
   ); /* Farbverlauf mit Transparenz */
   padding-top: 20px; /* Platz oben für den Inhalt */
 }
@@ -24,7 +24,7 @@ body {
   color: #000000; /* Textfarbe */
   text-align: center; /* Text zentrieren */
   margin-bottom: 20px; /* Abstand nach unten */
-  font-size: 50px;
+  font-size: 50px; /* Textgröße anpassen */
 }
 
 /* Stil für die Links in der Sidebar */
@@ -34,6 +34,7 @@ body {
   color: #000000; /* Textfarbe */
   text-decoration: none; /* Keine Unterstreichung */
   transition: background-color 0.3s; /* Animiere Hintergrundfarbe */
+  font-size: 35px; /* Textgröße anpassen */
 }
 
 /* Stil für Links im Hover-Zustand */
@@ -43,9 +44,9 @@ body {
 
 /* Stil für aktiven Link (z. B. die aktuell ausgewählte Seite) */
 .sidebar a.active {
-  background-color: #d60f0f9c; /* Hintergrundfarbe für den aktiven Link */
+  background-color: #9900ff9c; /* Hintergrundfarbe für den aktiven Link */
   color: #fff; /* Textfarbe für den aktiven Link */
-  font-size: 35px;
+  font-size: 35px; /* Textgröße anpassen */
 }
 
 /* CSS zum Zentrieren und Anpassen des Twitch-Streams */
@@ -69,8 +70,8 @@ body {
   right: 0;
   height: 100%;
   background: linear-gradient(
-      rgba(255, 217, 0, 0.5),
-      rgba(0, 0, 0, 0.8)
+      rgb(250, 250, 250),
+      rgba(0, 0, 0, 0.603)
   );
   padding-top: 20px;
   z-index: 1; /* Stellt sicher, dass die rechte Sidebar über dem Twitch-Stream liegt */
