@@ -13,8 +13,11 @@ body {
   top: 0;
   left: 0;
   height: 100%; /* Füllt die gesamte Bildschirmhöhe aus */
-  
-  background: linear-gradient(rgba(255, 217, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Farbverlauf mit Transparenz */
+
+  background: linear-gradient(
+    rgba(255, 217, 0, 0.5),
+    rgba(0, 0, 0, 0.8)
+  ); /* Farbverlauf mit Transparenz */
   padding-top: 20px; /* Platz oben für den Inhalt */
 }
 
@@ -37,12 +40,12 @@ body {
 
 /* Stil für Links im Hover-Zustand */
 .sidebar a:hover {
-  background-color: #ffd000; /* Hintergrundfarbe ändern */
+  background-color: #ffd00085; /* Hintergrundfarbe ändern */
 }
 
 /* Stil für aktiven Link (z. B. die aktuell ausgewählte Seite) */
 .sidebar a.active {
-  background-color: #d60f0f; /* Hintergrundfarbe für den aktiven Link */
+  background-color: #d60f0f9c; /* Hintergrundfarbe für den aktiven Link */
   color: #fff; /* Textfarbe für den aktiven Link */
   font-size: 35px;
 }
