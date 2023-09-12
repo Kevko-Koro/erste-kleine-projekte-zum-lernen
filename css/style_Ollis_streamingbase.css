@@ -3,6 +3,10 @@ body {
     background-color: #201f1f;
 }
 
+.sidebartext {
+    font-size: 35px;
+}
+
 /* Die Sidebar wird links am Bildschirm platziert und hat eine Breite von 250px */
 .sidebar {
   width: 250px;
@@ -23,6 +27,7 @@ body {
   color: #000000; /* Textfarbe */
   text-align: center; /* Text zentrieren */
   margin-bottom: 20px; /* Abstand nach unten */
+  font-size: 50px;
 }
 
 /* Stil für die Links in der Sidebar */
@@ -43,4 +48,5 @@ body {
 .sidebar a.active {
   background-color: #d60f0f; /* Hintergrundfarbe für den aktiven Link */
   color: #fff; /* Textfarbe für den aktiven Link */
+  font-size: 35px;
 }
