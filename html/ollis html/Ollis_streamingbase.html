@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/ollis css/style_Ollis_streamingbase.css">
+    <!-- Schritt 2: Laden der Twitch-Embed-JavaScript-Datei -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    
     <title>V3ikko-Stream</title>
 
 </head>
 <body>
-    <div class="center">
-        <!-- Hier wird der Twitch-Stream eingebettet -->
-        <iframe src="https://player.twitch.tv/?channel=V31kko&parent=https://www.twitch.tv/v31kko"
-            frameborder="0"
-            scrolling="no"
-            
-            allowfullscreen="true">
-        </iframe>
-    </div>
+    <!-- Schritt 1: Platzhalterelement erstellen -->
+    <div class="streamdiv" id="twitch-embed"></div>
+
     <div class="sidebar">
         <h2>Navigation</h2>
         <a href="#" class="active">Startseite</a>
@@ -24,7 +21,15 @@
         <a href="#" class="sidebartext">Games</a>
         <a href="#" class="sidebartext">Kontakt</a>
     </div>
-
+<!-- Schritt 3: Initialisierung des Twitch.Embed-Objekts -->
+<script>
+    new Twitch.Embed("twitch-embed", {
+      width: "100%",
+      height: "100%",
+      channel: "V31KKO",
+      parent: ["www.twitch.tv"]
+    });
+  </script>
     
 </body>
 </html>
