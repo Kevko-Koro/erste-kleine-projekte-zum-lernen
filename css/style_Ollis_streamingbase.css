@@ -1,10 +1,9 @@
-
 body {
-    background-color: #201f1f;
+  background-color: #201f1f;
 }
 
 .sidebartext {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 /* Die Sidebar wird links am Bildschirm platziert und hat eine Breite von 250px */
@@ -14,11 +13,8 @@ body {
   top: 0;
   left: 0;
   height: 100%; /* Füllt die gesamte Bildschirmhöhe aus */
-  background: linear-gradient(
-    to bottom,
-    #f0d800,
-    #000000
-  ); /* Linearer Farbverlauf von #333 (oben) nach #555 (unten) */
+  
+  background: linear-gradient(rgba(255, 217, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Farbverlauf mit Transparenz */
   padding-top: 20px; /* Platz oben für den Inhalt */
 }
 
