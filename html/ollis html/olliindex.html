@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/ollis css/styleolli.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Schritt 2: Laden der Twitch-Embed-JavaScript-Datei -->
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
@@ -37,11 +37,12 @@
             width: "100%",
             height: "100%",
             channel: "v31kko",
+            autoplay: true,
             parent: ["www.twitch.tv"]
         });
 
         twitch_embed.addEventListener(Twitch.Embed.VIDEO_PLAY, () => {
-            console.log("Video is Ready!!");
+            console.log("Video is Play!!");
             
             var twitch_placeholder = document.getElementById('twitch_placeholder');
             twitch_placeholder.style.display = 'none';
