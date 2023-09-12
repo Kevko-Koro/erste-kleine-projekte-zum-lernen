@@ -1,0 +1,46 @@
+
+body {
+    background-color: #201f1f;
+}
+
+/* Die Sidebar wird links am Bildschirm platziert und hat eine Breite von 250px */
+.sidebar {
+  width: 250px;
+  position: fixed; /* Hält die Sidebar beim Scrollen am Bildschirm */
+  top: 0;
+  left: 0;
+  height: 100%; /* Füllt die gesamte Bildschirmhöhe aus */
+  background: linear-gradient(
+    to bottom,
+    #f0d800,
+    #000000
+  ); /* Linearer Farbverlauf von #333 (oben) nach #555 (unten) */
+  padding-top: 20px; /* Platz oben für den Inhalt */
+}
+
+/* Stil für die Überschrift der Sidebar */
+.sidebar h2 {
+  color: #000000; /* Textfarbe */
+  text-align: center; /* Text zentrieren */
+  margin-bottom: 20px; /* Abstand nach unten */
+}
+
+/* Stil für die Links in der Sidebar */
+.sidebar a {
+  display: block; /* Macht den Link zu einem Blockelement */
+  padding: 10px 20px; /* Innenabstand für den Link */
+  color: #000000; /* Textfarbe */
+  text-decoration: none; /* Keine Unterstreichung */
+  transition: background-color 0.3s; /* Animiere Hintergrundfarbe */
+}
+
+/* Stil für Links im Hover-Zustand */
+.sidebar a:hover {
+  background-color: #ffd000; /* Hintergrundfarbe ändern */
+}
+
+/* Stil für aktiven Link (z. B. die aktuell ausgewählte Seite) */
+.sidebar a.active {
+  background-color: #d60f0f; /* Hintergrundfarbe für den aktiven Link */
+  color: #fff; /* Textfarbe für den aktiven Link */
+}
