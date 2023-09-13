@@ -39,27 +39,57 @@
 
     <!-- Das ist dein JavaScript-Code -->
     <script>
-      // Hier wird eine Variable "twitch_embed" erstellt, die den Twitch-Player repräsentiert
-      var twitch_embed = new Twitch.Embed("twitch-embed", {
-        width: "100%", // Breite des Players auf 100% der Container-Breite
-        height: "100%", // Höhe des Players auf 100% der Container-Höhe
-        channel: "v31kko", // Der Twitch-Kanal, der angezeigt werden soll
-        autoplay: true, // Das Video soll automatisch abgespielt werden
-        parent: ["www.twitch.tv"], // Die erlaubte Eltern-Domain, von der aus dieser Player eingebettet werden darf
-      });
-
-      // Hier wird ein Event-Listener hinzugefügt, um auf das VIDEO_PLAY-Event zu reagieren
-      twitch_embed.addEventListener(Twitch.Embed.VIDEO_PLAY, () => {
-        console.log("Video is Play!!"); // Diese Nachricht wird in der Konsole ausgegeben, wenn das Video gestartet wird
-
-        // Hier wird der Platzhalter ausgeblendet, wenn das Video gestartet wird
-        var twitch_placeholder = document.getElementById("twitch_placeholder");
-        twitch_placeholder.style.display = "none";
-
-        // Hier wird der Twitch-Player sichtbar gemacht, wenn das Video gestartet wird
-        var twitch_embed = document.getElementById("twitch-embed");
-        twitch_embed.style.display = "block";
-      });
+        // Initialisieren Sie das Twitch Embed mit den gewünschten Parametern
+        var twitch_embed = new Twitch.Embed("twitch-embed", {
+            width: "100%",
+            height: "100%",
+            channel: "v31kko",
+            autoplay: true,
+            parent: ["www.twitch.tv"]
+        });
+    
+        // Initialisieren Sie eine Zustandsvariable, um den Kanalstatus zu verfolgen
+        let state = false;
+    
+        // Fügen Sie einen Event-Listener hinzu, um den Kanalstatus zu überwachen, wenn die Seite geladen wird
+        twitch_embed.addEventListener(Twitch.Embed.ONLINE, () => {
+            console.log("Channel is online!!");
+            state = true;
+    
+            // Verstecken Sie das Platzhalterelement und zeigen Sie das Twitch Embed an
+            var twitch_placeholder = document.getElementById('twitch_placeholder');
+            twitch_placeholder.style.display = 'none';
+            var twitch_embed_element = document.getElementById('twitch-embed');
+            twitch_embed_element.style.display = 'block';
+        });
+    
+        twitch_embed.addEventListener(Twitch.Embed.OFFLINE, () => {
+            console.log("Channel is offline!");
+            state = false;
+    
+            // Zeigen Sie das Platzhalterelement an und verstecken Sie das Twitch Embed
+            var twitch_placeholder = document.getElementById('twitch_placeholder');
+            twitch_placeholder.style.display = 'block';
+            var twitch_embed_element = document.getElementById('twitch-embed');
+            twitch_embed_element.style.display = 'none';
+        });
+    
+        // Definieren Sie eine Funktion, um den Kanalstatus zu überprüfen und entsprechende Aktionen auszuführen
+        function twitch_play_event() {
+            console.log("Check Channel State");
+    
+            // Hier können Sie den Wert von 'state' verwenden, um weitere Aktionen auszuführen
+            if (state) {
+                // Der Kanal ist online
+                // Führen Sie hier entsprechende Aktionen aus, wenn der Kanal online ist
+            } else {
+                // Der Kanal ist offline
+                // Führen Sie hier entsprechende Aktionen aus, wenn der Kanal offline ist
+            }
+        }
+    
+        // Verwenden Sie setInterval, um 'twitch_play_event' in regelmäßigen Abständen aufzurufen
+        setInterval(twitch_play_event, 5000);
     </script>
 
     <!-- Rechte Sidebar mit Nachrichtenkästen -->
