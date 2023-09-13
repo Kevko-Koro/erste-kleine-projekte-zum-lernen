@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <!-- Schritt 2: Laden der Twitch-Embed-JavaScript-Datei -->
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
     <title>V3ikko-Stream</title>
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <!-- Schritt 1: Platzhalterelement erstellen -->
     <div style="display: none" class="streamdiv" id="twitch-embed"></div>
 
     <div id="twitch_placeholder">
-        <img src="https://images3.alphacoders.com/109/1093627.jpg" width="100%">
+      <img src="https://images3.alphacoders.com/109/1093627.jpg" width="100%" />
     </div>
 
     <div class="sidebar">
-        <h2>Navigation</h2>
-        <a href="#" class="active">Startseite</a>
-        <a href="#" class="sidebartext">Streams</a>
-        <a href="#" class="sidebartext">Games</a>
-        <a href="#" class="sidebartext">Kontakt</a>
+      <h2>Navigation</h2>
+      <a href="#" class="active">Startseite</a>
+      <a href="#" class="sidebartext">Streams</a>
+      <a href="#" class="sidebartext">Games</a>
+      <a href="#" class="sidebartext">Kontakt</a>
     </div>
 
-
-
     <!-- Schritt 3: Initialisierung des Twitch.Embed-Objekts -->
-    <script> <!-- var embed definiert die variable - damit wird der embed.addEventListener gelesen-->
-        var twitch_embed = new Twitch.Embed("twitch-embed", {
-            width: "100%",
-            height: "100%",
-            channel: "v31kko",
-            autoplay: true,
-            parent: ["www.twitch.tv"]
-        });
 
-        twitch_embed.addEventListener(Twitch.Embed.VIDEO_PLAY, () => {
-            console.log("Video is Play!!");
-            
-            var twitch_placeholder = document.getElementById('twitch_placeholder');
-            twitch_placeholder.style.display = 'none';
-            var twitch_embed = document.getElementById('twitch-embed');
-            twitch_embed.style.display = 'block';
-        });
+    <!-- Das ist dein HTML-Code, der ein Twitch-Video einbettet -->
+    <div id="twitch_placeholder">
+      <!-- Hier wird ein Platzhalter für das Twitch-Video angezeigt, bevor es gestartet wird -->
+      <!-- Der Twitch-Player wird später hier eingefügt -->
+    </div>
+    <div id="twitch-embed">
+      <!-- Hier wird der eigentliche Twitch-Player eingefügt -->
+    </div>
 
+    <!-- Das ist dein JavaScript-Code -->
+    <script>
+      // Hier wird eine Variable "twitch_embed" erstellt, die den Twitch-Player repräsentiert
+      var twitch_embed = new Twitch.Embed("twitch-embed", {
+        width: "100%", // Breite des Players auf 100% der Container-Breite
+        height: "100%", // Höhe des Players auf 100% der Container-Höhe
+        channel: "v31kko", // Der Twitch-Kanal, der angezeigt werden soll
+        autoplay: true, // Das Video soll automatisch abgespielt werden
+        parent: ["www.twitch.tv"], // Die erlaubte Eltern-Domain, von der aus dieser Player eingebettet werden darf
+      });
+
+      // Hier wird ein Event-Listener hinzugefügt, um auf das VIDEO_PLAY-Event zu reagieren
+      twitch_embed.addEventListener(Twitch.Embed.VIDEO_PLAY, () => {
+        console.log("Video is Play!!"); // Diese Nachricht wird in der Konsole ausgegeben, wenn das Video gestartet wird
+
+        // Hier wird der Platzhalter ausgeblendet, wenn das Video gestartet wird
+        var twitch_placeholder = document.getElementById("twitch_placeholder");
+        twitch_placeholder.style.display = "none";
+
+        // Hier wird der Twitch-Player sichtbar gemacht, wenn das Video gestartet wird
+        var twitch_embed = document.getElementById("twitch-embed");
+        twitch_embed.style.display = "block";
+      });
     </script>
 
     <!-- Rechte Sidebar mit Nachrichtenkästen -->
     <div class="right-sidebar">
-        <div class="message-box">Nachricht 1</div>
-        <div class="message-box">Nachricht 2</div>
-        <div class="message-box">Nachricht 3</div>
+      <div class="message-box">Nachricht 1</div>
+      <div class="message-box">Nachricht 2</div>
+      <div class="message-box">Nachricht 3</div>
     </div>
 
-    <div> </div>
-</body>
-
+    <div></div>
+  </body>
 </html>
