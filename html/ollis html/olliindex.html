@@ -3,21 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Verknüpfung zur externen CSS-Datei -->
     <link rel="stylesheet" href="../../css/ollis css/styleolli.css" />
     <!-- Schritt 2: Laden der Twitch-Embed-JavaScript-Datei -->
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
     <title>V3ikko-Stream</title>
   </head>
-
   <body>
     <!-- Schritt 1: Platzhalterelement erstellen -->
     <div style="display: none" class="streamdiv" id="twitch-embed"></div>
-
-
-      <img src="https://images3.alphacoders.com/109/1093627.jpg" width="100%" />
-    </div>
-
+    <!-- Hintergrundbild einfügen -->
+    <img src="https://images3.alphacoders.com/109/1093627.jpg" width="100%" />
+    <!-- Sidebar für Navigation -->
     <div class="sidebar">
       <h2>Navigation</h2>
       <a href="#" class="active">Startseite</a>
@@ -37,59 +34,66 @@
       <!-- Hier wird der eigentliche Twitch-Player eingefügt -->
     </div>
 
+    <!-- Fügen Sie einen Link zur Twitch-Startseite hinzu und verstecken Sie ihn standardmäßig -->
+    <a id="twitch_home_link" href="https://www.twitch.tv/" target="_blank" style="display: none;">Twitch Startseite</a>
+
     <!-- Das ist dein JavaScript-Code -->
     <script>
-        // Initialisieren Sie das Twitch Embed mit den gewünschten Parametern
-        var twitch_embed = new Twitch.Embed("twitch-embed", {
-            width: "100%",
-            height: "100%",
-            channel: "v31kko",
-            autoplay: true,
-            parent: ["www.twitch.tv"]
-        });
-    
-        // Initialisieren Sie eine Zustandsvariable, um den Kanalstatus zu verfolgen
-        let state = false;
-    
-        // Fügen Sie einen Event-Listener hinzu, um den Kanalstatus zu überwachen, wenn die Seite geladen wird
-        twitch_embed.addEventListener(Twitch.Embed.ONLINE, () => {
-            console.log("Channel is online!!");
-            state = true;
-    
-            // Verstecken Sie das Platzhalterelement und zeigen Sie das Twitch Embed an
-            var twitch_placeholder = document.getElementById('twitch_placeholder');
-            twitch_placeholder.style.display = 'none';
-            var twitch_embed_element = document.getElementById('twitch-embed');
-            twitch_embed_element.style.display = 'block';
-        });
-    
-        twitch_embed.addEventListener(Twitch.Embed.OFFLINE, () => {
-            console.log("Channel is offline!");
-            state = false;
-    
-            // Zeigen Sie das Platzhalterelement an und verstecken Sie das Twitch Embed
-            var twitch_placeholder = document.getElementById('twitch_placeholder');
-            twitch_placeholder.style.display = 'block';
-            var twitch_embed_element = document.getElementById('twitch-embed');
-            twitch_embed_element.style.display = 'none';
-        });
-    
-        // Definieren Sie eine Funktion, um den Kanalstatus zu überprüfen und entsprechende Aktionen auszuführen
-        function twitch_play_event() {
-            console.log("Check Channel State");
-    
-            // Hier können Sie den Wert von 'state' verwenden, um weitere Aktionen auszuführen
-            if (state) {
-                // Der Kanal ist online
-                // Führen Sie hier entsprechende Aktionen aus, wenn der Kanal online ist
-            } else {
-                // Der Kanal ist offline
-                // Führen Sie hier entsprechende Aktionen aus, wenn der Kanal offline ist
-            }
+      // Initialisieren Sie das Twitch Embed mit den gewünschten Parametern
+      var twitch_embed = new Twitch.Embed("twitch-embed", {
+        width: "100%",
+        height: "100%",
+        channel: "v31kko",
+        autoplay: true,
+        parent: ["www.twitch.tv"]
+      });
+
+      // Initialisieren Sie eine Zustandsvariable, um den Kanalstatus zu verfolgen
+      let state = false;
+
+      // Fügen Sie einen Event-Listener hinzu, um den Kanalstatus zu überwachen, wenn die Seite geladen wird
+      twitch_embed.addEventListener(Twitch.Embed.ONLINE, () => {
+        console.log("Channel is online!!");
+        state = true;
+
+        // Verstecken Sie das Platzhalterelement und zeigen Sie das Twitch Embed an
+        var twitch_placeholder = document.getElementById('twitch_placeholder');
+        twitch_placeholder.style.display = 'none';
+        var twitch_embed_element = document.getElementById('twitch-embed');
+        twitch_embed_element.style.display = 'block';
+      });
+
+      twitch_embed.addEventListener(Twitch.Embed.OFFLINE, () => {
+        console.log("Channel is offline!");
+        state = false;
+
+        // Zeigen Sie das Platzhalterelement an und verstecken Sie das Twitch Embed
+        var twitch_placeholder = document.getElementById('twitch_placeholder');
+        twitch_placeholder.style.display = 'block';
+        var twitch_embed_element = document.getElementById('twitch-embed');
+        twitch_embed_element.style.display = 'none';
+
+        // Zeigen Sie einen Link zur Twitch-Startseite an, wenn der Kanal offline ist
+        var twitch_home_link = document.getElementById('twitch_home_link');
+        twitch_home_link.style.display = 'block';
+      });
+
+      // Definieren Sie eine Funktion, um den Kanalstatus zu überprüfen und entsprechende Aktionen auszuführen
+      function twitch_play_event() {
+        console.log("Check Channel State");
+
+        // Hier können Sie den Wert von 'state' verwenden, um weitere Aktionen auszuführen
+        if (state) {
+          // Der Kanal ist online
+          // Führen Sie hier entsprechende Aktionen aus, wenn der Kanal online ist
+        } else {
+          // Der Kanal ist offline
+          // Führen Sie hier entsprechende Aktionen aus, wenn der Kanal offline ist
         }
-    
-        // Verwenden Sie setInterval, um 'twitch_play_event' in regelmäßigen Abständen aufzurufen
-        setInterval(twitch_play_event, 5000);
+      }
+
+      // Verwenden Sie setInterval, um 'twitch_play_event' in regelmäßigen Abständen aufzurufen
+      setInterval(twitch_play_event, 5000);
     </script>
 
     <!-- Rechte Sidebar mit Nachrichtenkästen -->
@@ -99,6 +103,5 @@
       <div class="message-box">Nachricht 3</div>
     </div>
 
-    <div></div>
   </body>
 </html>
