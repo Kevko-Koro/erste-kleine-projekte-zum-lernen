@@ -1,0 +1,97 @@
+body {
+  background-color: rgb(180, 180, 180);
+}
+
+header,
+footer,
+section,
+aside {
+  border: 4px outset rgb(218, 218, 218);
+  padding: 10px;
+  margin: 50px;
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+}
+header {
+  background-color: rgba(218, 165, 32, 0.788);
+  text-align: center;
+}
+footer {
+  background-color: rgba(218, 165, 32, 0.582);
+}
+
+aside {
+  background-color: rgba(218, 165, 32, 0.521);
+}
+
+h1 {
+  border: 4px outset rgb(218, 218, 218);
+  background-color: rgba(240, 248, 255, 0.527);
+}
+h2 {
+  text-align: center;
+  background-color: rgba(240, 248, 255, 0.438);
+  border-radius: 10px;
+  display: inline-block;
+  border: 4px outset rgb(218, 218, 218);
+}
+h3 {
+  text-align: center;
+  background-color: rgba(218, 165, 32, 0.562);
+  border-radius: 10px;
+  display: inline-block;
+  border: 4px outset rgb(218, 218, 218);
+}
+ul {
+  margin: auto;
+  padding: 0%;
+}
+.imgsec {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.centerimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.aufklappbare-liste {
+  text-align: center;
+  list-style: none;
+  border: 4px outset rgb(218, 218, 218);
+}
+
+.aufklappbares-element .titel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  
+  background-color: rgba(218, 165, 32, 0.623);
+  border-radius: 10px;
+  border: 4px outset rgb(218, 218, 218);
+}
+
+.aufklappbares-element .inhalt {
+  display: none;
+  padding-left: 20px;
+}
+
+.aufklappbares-element .inhalt img {
+  max-width: 100%;
+}
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.listitems {
+  align-items: center;
+  list-style: none;
+  font-weight: bold;
+}
